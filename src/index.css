@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-light: #F5F5F5;
+  --color-brand-dark: #0A0A0A;
+  --color-brand-green: #00D959;
+  /* Trust/Action */
+
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-light);
+    color: var(--color-brand-dark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Extreme Typography Scale & Tight Kerning Constraint */
+  h1 {
+    font-size: clamp(5rem, 10vw, 13rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+}
+
+@layer components {
+
+  /* Flat UI Core */
+  .section-dark {
+    background-color: var(--color-brand-dark);
+    color: var(--color-brand-light);
+  }
+
+  /* No borders, no shadows on primary buttons. Solid trust green. */
+  .btn-primary {
+    background-color: var(--color-brand-green);
+    color: var(--color-brand-dark);
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    /* Pill shape */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    border: none;
+  }
+
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: inherit;
+    font-weight: 500;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    border: 1px solid currentColor;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Assuming used mostly on dark backgrounds */
+  }
+
+  .section-light .btn-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  /* Utility for massive layout gaps */
+  .structural-padding {
+    padding-top: clamp(6rem, 15vh, 12rem);
+    padding-bottom: clamp(6rem, 15vh, 12rem);
+  }
+}
