@@ -55,12 +55,12 @@ const App = () => {
                 <div className="max-w-8xl mx-auto">
                     <div className="mb-24">
                         <h2 className="mb-6">The Double Blindness.</h2>
-                        <p className="text-2xl md:text-4xl font-medium opacity-80 max-w-4xl leading-tight">
+                        <p className="text-xl md:text-2xl lg:text-4xl font-medium opacity-80 max-w-4xl leading-tight">
                             The industry is trapped between two incomplete solutions. You have the eyes in space and the nose on the ground, but they aren't talking to each other.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 border-t border-opacity-20 border-white pt-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 border-t border-opacity-20 border-white pt-12 md:pt-16">
                         {/* Column A */}
                         <div>
                             <div className="flex items-center gap-5 mb-8 text-[var(--color-brand-green)]">
@@ -89,9 +89,9 @@ const App = () => {
             </section>
 
             {/* 4. The FluxPoint Solution (The Core Logic) */}
-            <section id="architecture" className="min-h-screen flex flex-col justify-center bg-[var(--color-brand-light)] px-6 md:px-12 lg:px-24 py-12">
+            <section id="architecture" className="min-h-screen flex flex-col justify-center bg-[var(--color-brand-light)] px-6 md:px-12 lg:px-24 py-16 lg:py-12">
                 <div className="max-w-8xl mx-auto w-full">
-                    <h2 className="mb-24">The Event-Driven Architecture.</h2>
+                    <h2 className="mb-12 md:mb-24">The Event-Driven Architecture.</h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
                         {[
@@ -113,19 +113,19 @@ const App = () => {
             </section>
 
             {/* 5. Technical Deep Dive (The Hardware) */}
-            <section className="min-h-screen flex flex-col justify-center section-dark px-6 md:px-12 lg:px-24">
+            <section className="min-h-screen flex flex-col justify-center section-dark px-6 md:px-12 lg:px-24 py-16 lg:py-12">
                 <div className="max-w-8xl mx-auto w-full">
-                    <h2 className="mb-24">Technical Deep Dive.</h2>
+                    <h2 className="mb-12 md:mb-24">Technical Deep Dive.</h2>
 
-                    <div className="space-y-16">
+                    <div className="space-y-12 md:space-y-16">
                         {[
                             { name: "The Vector Node", spec: "Methane (ppm) + Ultrasonic Anemometer (Wind Speed/Direction)." },
                             { name: "Power Harvesting", tech: "Thermoelectric Generators (TEG).", benefit: "Converts pipeline waste heat into electricity. No batteries required." },
                             { name: "Winter Resilience", tech: "Acoustic Piezo Sensors.", benefit: "Detects high-pressure leaks via sound (30-40kHz) when optical satellites are blind." }
                         ].map((component, idx) => (
-                            <div key={idx} className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 border-b border-opacity-20 border-white last:border-0 last:pb-0">
-                                <h3 className="text-2xl md:text-3xl text-white col-span-1">{component.name}</h3>
-                                <div className="col-span-2 text-xl space-y-4">
+                            <div key={idx} className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 py-8 md:py-12 border-b border-opacity-20 border-white last:border-0 last:pb-0">
+                                <h3 className="text-2xl md:text-3xl text-white md:col-span-1">{component.name}</h3>
+                                <div className="md:col-span-2 text-lg md:text-xl space-y-4">
                                     {component.spec && <p><span className="opacity-50">Spec:</span> {component.spec}</p>}
                                     {component.tech && <p><span className="opacity-50">Tech:</span> {component.tech}</p>}
                                     {component.benefit && <p><span className="opacity-50">Benefit:</span> <span className="text-[var(--color-brand-green)]">{component.benefit}</span></p>}
@@ -137,19 +137,19 @@ const App = () => {
             </section>
 
             {/* 6. Deployment Strategy (The Efficiency) */}
-            <section className="min-h-screen flex flex-col justify-center bg-[var(--color-brand-light)] px-6 md:px-12 lg:px-24 py-12 border-t border-[var(--color-brand-dark)]">
+            <section className="min-h-screen flex flex-col justify-center bg-[var(--color-brand-light)] px-6 md:px-12 lg:px-24 py-16 lg:py-12 border-t border-[var(--color-brand-dark)]">
                 <div className="max-w-8xl mx-auto w-full">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="p-8 sm:p-12 -ml-8 rounded-3xl shadow-xl bg-white border border-[var(--color-brand-dark)] border-opacity-10">
-                            <h2 className="mb-12">Optimized by Fluid Dynamics.</h2>
-                            <div className="space-y-8 text-xl opacity-80 leading-relaxed border-l-4 border-[var(--color-brand-dark)] pl-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                        <div className="p-6 md:p-8 sm:p-12 lg:-ml-8 rounded-3xl shadow-xl bg-white border border-[var(--color-brand-dark)] border-opacity-10">
+                            <h2 className="mb-8 md:mb-12">Optimized by Fluid Dynamics.</h2>
+                            <div className="space-y-6 md:space-y-8 text-lg md:text-xl opacity-80 leading-relaxed border-l-4 border-[var(--color-brand-dark)] pl-6 md:pl-8">
                                 <p>We do not grid the entire pipeline.</p>
                                 <p>We ingest terrain data into CFD (Computational Fluid Dynamics) models.</p>
                                 <p>We identify natural <span className="font-bold">"Gas Traps"</span> (wakes behind buildings/valleys).</p>
-                                <p className="text-2xl font-bold mt-12 text-[var(--color-brand-green)]">Result: 90% coverage with 10% of the sensors.</p>
+                                <p className="text-xl md:text-2xl font-bold mt-8 md:mt-12 text-[var(--color-brand-green)]">Result: 90% coverage with 10% of the sensors.</p>
                             </div>
                         </div>
-                        <div className="bg-[var(--color-brand-dark)] rounded-md overflow-hidden p-2 aspect-video flex items-center justify-center shadow-2xl">
+                        <div className="bg-[var(--color-brand-dark)] rounded-md overflow-hidden p-2 aspect-video flex items-center justify-center shadow-2xl mt-8 lg:mt-0">
                             <video
                                 src="/assets/methane-how_it_works.mov"
                                 autoPlay
@@ -224,42 +224,42 @@ const App = () => {
 
             {/* 8. Footer */}
             <footer id="about" className="min-h-screen flex flex-col justify-end bg-[var(--color-brand-light)] text-[var(--color-brand-dark)] py-12 px-6 md:px-12 lg:px-24 border-t border-[var(--color-brand-dark)]">
-                <div className="max-w-8xl mx-auto flex flex-col justify-between h-[80vh] w-full">
+                <div className="max-w-8xl mx-auto flex flex-col justify-between min-h-[50vh] lg:h-[80vh] w-full">
 
                     <div className="mt-20">
-                        <h2 className="text-[clamp(3rem,8vw,8rem)] leading-none font-bold tracking-tighter mb-12 max-w-4xl">Ready to deploy precision?</h2>
-                        <div className="flex flex-wrap gap-4 items-center">
-                            <a href="mailto:lakshaygupta953@gmail.com" className="btn-primary text-xl px-8 py-4 inline-block">
+                        <h2 className="text-[clamp(3rem,8vw,8rem)] leading-none font-bold tracking-tighter mb-8 md:mb-12 max-w-4xl">Ready to deploy precision?</h2>
+                        <div className="flex flex-col sm:flex-row flex-wrap gap-4 items-start sm:items-center">
+                            <a href="mailto:lakshaygupta953@gmail.com" className="btn-primary text-base md:text-xl px-6 py-3 md:px-8 md:py-4 inline-block w-full sm:w-auto text-center">
                                 Contact Lakshay
                             </a>
-                            <button className="btn-primary text-xl px-8 py-4">
+                            <button className="btn-primary text-base md:text-xl px-6 py-3 md:px-8 md:py-4 w-full sm:w-auto">
                                 Download Whitepaper
                             </button>
-                            <button className="btn-secondary border-[var(--color-brand-dark)] text-[var(--color-brand-dark)] text-xl px-8 py-4">
+                            <button className="btn-secondary border-[var(--color-brand-dark)] text-[var(--color-brand-dark)] text-base md:text-xl px-6 py-3 md:px-8 md:py-4 w-full sm:w-auto">
                                 View System Architecture
                             </button>
                         </div>
                     </div>
 
-                    <div className="w-full">
-                        <div className="flex flex-col md:flex-row justify-between items-start md:items-end pb-8 border-b-2 border-[var(--color-brand-dark)] mb-8">
-                            <div className="text-4xl font-bold tracking-tighter mb-8 md:mb-0">Lakshay Gupta</div>
+                    <div className="w-full mt-16 lg:mt-0">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-end pb-8 border-b-2 border-[var(--color-brand-dark)] mb-8 gap-8">
+                            <div className="text-3xl md:text-4xl font-bold tracking-tighter">Lakshay Gupta</div>
 
-                            <div className="flex flex-wrap gap-8 text-lg font-bold">
+                            <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-8 text-base md:text-lg font-bold">
                                 <a href="mailto:lakshaygupta953@gmail.com" className="hover:text-[var(--color-brand-green)] transition-colors">lakshaygupta953@gmail.com</a>
                                 <a href="https://lakshaydesigns.site" target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity">Portfolio</a>
                                 <a href="https://github.com/LakshayGupta78" target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition-opacity">GitHub</a>
                             </div>
                         </div>
 
-                        <div className="flex justify-between items-center text-sm font-bold opacity-60">
-                            <div className="flex gap-8">
+                        <div className="flex flex-col md:flex-row gap-4 justify-between md:items-center text-sm font-bold opacity-60">
+                            <div className="flex flex-wrap gap-4 md:gap-8">
                                 <a href="https://linkedin.com/in/lakshaygupta" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">LinkedIn</a>
                                 <a href="https://twitter.com/lakshaygupta" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">Twitter / X</a>
                                 <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a>
                             </div>
 
-                            <div className="text-right">
+                            <div className="text-left md:text-right">
                                 © 2026 Lakshay Gupta
                             </div>
                         </div>
