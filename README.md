@@ -1,6 +1,6 @@
 # FluxPoint
 
-Landing page & visual prototype for the methane abatement pitch. Built with React and Tailwind CSS.
+This is the landing page and visual prototype I built for the methane abatement pitch. I used React and Tailwind CSS to put it together.
 
 ## Setup
 ```bash
